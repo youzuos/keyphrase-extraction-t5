@@ -6,14 +6,16 @@ A keyword extraction system based on LLM, trained and evaluated using the KP20K 
 
 ```
 Doc_1/
-├── data/kp20k/          # 数据集
-├── src/                 # 源代码
-│   ├── data/            # 数据处理模块
-│   ├── models/          # 模型相关代码
-│   └── api/             # API接口
-├── requirements.txt     # 依赖
-├── static/              # 前端
-└── README.md           # 文档
+├── data/kp20k/          # dataset
+├── src/                 
+│   ├── data/            # data processing
+│   ├── models/          # model training code
+│   └── api/             # API
+├── requirements.txt     # libraries
+├── static/              # frontend
+├── models/              # download from Hugging Face (youzuos/Keyword_Extraction_T5)
+│   └── final_model/     # trained model
+└── README.md           # document
 
 stall library
 pip install -r requirements.txt
@@ -65,6 +67,7 @@ KP20K dataset contains the titles, abstracts, and keywords of scientific papers.
 - abstract（Used）
 - keyphrases（Used）
 - prmu
+
 
 
 
