@@ -12,6 +12,7 @@ Doc_1/
 │   ├── models/          # 模型相关代码
 │   └── api/             # API接口
 ├── requirements.txt     # 依赖
+├── static/              # 前端
 └── README.md           # 文档
 
 stall library
@@ -64,6 +65,7 @@ KP20K dataset contains the titles, abstracts, and keywords of scientific papers.
 - abstract（Used）
 - keyphrases（Used）
 - prmu
+
 
 
 
