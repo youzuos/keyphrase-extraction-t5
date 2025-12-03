@@ -60,10 +60,11 @@ The front-end interface provides simple text input and keyword display functions
 
 dataset format
 KP20K dataset contains the titles, abstracts, and keywords of scientific papers. Each line is in JSON format:
-- `id`
-- `title`
-- `abstract`（Used）
-- `keyphrases`: （Used）
-- `prmu`
+- id
+- title`
+- abstract（Used）
+- keyphrases（Used）
+- prmu
+
 
 
