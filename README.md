@@ -1,2 +1,68 @@
-# keyphrase-extraction-t5
-AI-powered keyphrase extraction system using T5 transformer model. Trained on KP20K dataset with REST API and web interface.
+# AI-Powered Keyword Extraction System
+
+A keyword extraction system based on LLM, trained and evaluated using the KP20K dataset.
+
+## Structure
+
+```
+Doc_1/
+├── data/kp20k/          # 数据集
+├── src/                 # 源代码
+│   ├── data/            # 数据处理模块
+│   ├── models/          # 模型相关代码
+│   └── api/             # API接口
+├── tests/               # 测试文件
+├── requirements.txt     # 依赖
+└── README.md           # 文档
+
+## stall library
+pip install -r requirements.txt
+
+### 1. data processing
+The data processing module can be used to load, preprocess, and analyze the KP20K dataset.
+
+
+### 2. model training
+python train.py
+Configuration can be adjusted in `src/models/config.py` ：
+- model size（t5-small, t5-base, t5-large）
+- training epochs
+- batch size
+- learning rate
+
+### 3. use trained model
+#### interactive prediction
+python predict.py --model_path models/checkpoints/final_model --interactive
+
+
+#### Single text prediction
+python predict.py --model_path models/checkpoints/final_model --text "Your text here"
+
+
+### 4. evaluation
+python evaluate.py --model_path models/checkpoints/final_model --sample_size 100
+
+
+### 5. API Service
+python api.py
+
+- API documents：http://localhost:8000/docs
+- health：http://localhost:8000/health
+- extract keywords：POST http://localhost:8000/extract
+
+### 6. Web
+python api.py
+
+# Open in browser
+http://localhost:8000/
+
+The front-end interface provides simple text input and keyword display functions.
+
+## dataset format
+KP20K dataset contains the titles, abstracts, and keywords of scientific papers. Each line is in JSON format:
+- `id`
+- `title`
+- `abstract`（Used）
+- `keyphrases`: （Used）
+- `prmu`
+
