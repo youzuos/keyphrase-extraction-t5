@@ -17,7 +17,7 @@ Doc_1/
 │   └── final_model/     # trained model
 └── README.md           # document
 
-stall library
+install library
 pip install -r requirements.txt
 
 1. data processing
@@ -67,6 +67,7 @@ KP20K dataset contains the titles, abstracts, and keywords of scientific papers.
 - abstract（Used）
 - keyphrases（Used）
 - prmu
+
 
 
 
